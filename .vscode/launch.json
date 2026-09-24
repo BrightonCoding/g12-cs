@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "PacerTest",
+      "request": "launch",
+      "mainClass": "PacerTest",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Run current file (FirstSteps)",
+      "request": "launch",
+      "mainClass": "${file}",
+      "cwd": "${workspaceFolder}/FirstSteps"
+    }
+  ]
+}

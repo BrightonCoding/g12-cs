@@ -23,55 +23,27 @@ public class PacerTest extends JPanel
     super.paintComponent(g);
 
 
-    Pacer pacer = new Pacer(200, 200, leftShoe, rightShoe);
-    
+    // Walk a square: step one full step, then turn right.  Four
+    // right turns add up to 360 degrees, so the pacer ends up back
+    // where it started, facing east again.
+    Pacer pacer = new Pacer(110, 100, leftShoe, rightShoe);
+
+    for (int i = 0; i < 4; i++)
+    {
       pacer.draw(g);
 
       pacer.firstStep();
       pacer.nextStep();
       pacer.stop();
-    
 
-    Pacer pacer2 = new Pacer(400, 150, leftShoe, rightShoe);
-    pacer2.turnRight();
-
-      pacer2.draw(g);
-
-      pacer2.firstStep();
-      pacer2.nextStep();
-      pacer2.stop();
-    
-
-    
-        Pacer pacer3 = new Pacer(400, 350, leftShoe, rightShoe);
-    
-        pacer3.turnAround();
-
-      pacer3.draw(g);
-
-      pacer3.firstStep();
-      pacer3.nextStep();
-      pacer3.stop();
-    
-       
-
-      Pacer pacer4 = new Pacer(200, 400, leftShoe, rightShoe);
-    pacer4.turnLeft();
-
-      pacer4.draw(g);
-
-      pacer4.firstStep();
-      pacer4.nextStep();
-      pacer4.stop();
-      
-    
-      
+      pacer.turnRight();
+    }
   }
 
   public static void main(String[] args)
   {
     JFrame window = new JFrame("Exercise 8 - PacerTest");
-    window.setBounds(100, 100, 700, 420);
+    window.setBounds(100, 100, 420, 460);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     PacerTest panel = new PacerTest();
