@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PollTest",
+      "request": "launch",
+      "mainClass": "Poll.PollTest",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Poll",
+      "request": "launch",
+      "mainClass": "Poll.Poll",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "FirstSteps",
+      "request": "launch",
+      "mainClass": "FirstSteps",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "PacerTest",
       "request": "launch",
       "mainClass": "PacerTest",

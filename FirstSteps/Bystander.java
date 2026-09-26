@@ -6,6 +6,8 @@ public class Bystander extends Walker
 {
   private int tapsCount;
 
+  private int youngWoo;
+
   // Constructor
   public Bystander(int x, int y, Image leftPic, Image rightPic)
   {
