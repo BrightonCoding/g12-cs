@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Rainbow",
+      "request": "launch",
+      "mainClass": "ch6.Rainbow",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Bmi",
+      "request": "launch",
+      "mainClass": "ch6.Bmi",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "PollTest",
       "request": "launch",
       "mainClass": "Poll.PollTest",
