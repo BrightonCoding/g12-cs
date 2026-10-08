@@ -29,7 +29,7 @@ public class Rainbow extends JPanel
     // that represent the center of the rainbow rings:
     // ________________________________________________
     int xCenter = getWidth() / 2;
-    int yCenter = getHeight() / 2;
+    int yCenter = 3 * getHeight() / 4;
  
     // Declare and initialize the radius of the large semicircle:
     // ________________________________________________
@@ -47,7 +47,7 @@ public class Rainbow extends JPanel
     // ________________________________________________
     int smallRadius = getHeight() / 4;
     double mediumRadiusDB = Math.sqrt(largeRadius * smallRadius);
-    int mediumRadius = (int) mediumRadiusDB;
+    int mediumRadius = (int) (mediumRadiusDB + 0.5);
     g.setColor(Color.GREEN);
 
     // g.fillArc( ______________ );
@@ -67,7 +67,7 @@ public class Rainbow extends JPanel
 
     // Draw the sky-color semicircle:
     // ________________________________________________
-    g.setColor(Color.CYAN);
+    g.setColor(skyColor);
 
     g.fillArc(xCenter - skyRadius, yCenter - skyRadius, skyRadius * 2, skyRadius * 2,0,180);
   }
