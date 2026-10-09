@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Craps",
+      "request": "launch",
+      "mainClass": "concluded.Craps",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "Rps",
       "request": "launch",
       "mainClass": "ch7.Rps",
