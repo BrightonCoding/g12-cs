@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Die",
+      "request": "launch",
+      "mainClass": "craps.Die",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "CrapsStats",
+      "request": "launch",
+      "mainClass": "craps.CrapsStats",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "CrapsTest1",
+      "request": "launch",
+      "mainClass": "craps.CrapsTest1",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "Rainbow",
       "request": "launch",
       "mainClass": "ch6.Rainbow",
