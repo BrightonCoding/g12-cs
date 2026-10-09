@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Rps",
+      "request": "launch",
+      "mainClass": "ch7.Rps",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Dates",
+      "request": "launch",
+      "mainClass": "ch7.Dates",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Wages",
+      "request": "launch",
+      "mainClass": "ch7.Wages",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "CrapsTest1",
       "request": "launch",
       "mainClass": "craps_case.CrapsTest1",
