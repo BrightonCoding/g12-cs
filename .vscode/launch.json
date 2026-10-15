@@ -3,6 +3,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MakeChange",
+      "request": "launch",
+      "mainClass": "ch8.MakeChange",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "PrintStarTriangle",
+      "request": "launch",
+      "mainClass": "ch8.PrintStarTriangle",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "GradeAvg",
+      "request": "launch",
+      "mainClass": "ch8.GradeAvg",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "SumOfDigits",
+      "request": "launch",
+      "mainClass": "ch8.SumOfDigits",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "PerfectSquareTester",
+      "request": "launch",
+      "mainClass": "ch8.PerfectSquareTester",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "IntegerSum",
+      "request": "launch",
+      "mainClass": "ch8.IntegerSum",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "Population",
       "request": "launch",
       "mainClass": "ch8.Population",
