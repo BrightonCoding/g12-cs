@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MyMath",
+      "request": "launch",
+      "mainClass": "ch8.MyMath",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "MakeChange",
       "request": "launch",
       "mainClass": "ch8.MakeChange",
