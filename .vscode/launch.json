@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Pong",
+      "request": "launch",
+      "mainClass": "pong.Pong",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
+      "name": "Factor",
+      "request": "launch",
+      "mainClass": "ch8.Factor",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "MyMath",
       "request": "launch",
       "mainClass": "ch8.MyMath",
