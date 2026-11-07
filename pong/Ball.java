@@ -61,10 +61,18 @@ public void bounceRight() {
 
         public void bounceRandomX(int winner){
 
+            /* 
             if (winner == 1) {
                 dx = (int) (15 * Math.cos(Math.toRadians(degrees)));
             } else {
                 dx = -(int) (15 * Math.cos(Math.toRadians(degrees)));                    
+            }
+            */
+
+            if (winner == 1) {
+                dx = 30;
+            } else {
+                dx = -30;                    
             }
 
         }
