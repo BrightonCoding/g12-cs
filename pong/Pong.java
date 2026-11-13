@@ -17,14 +17,14 @@ import java.util.ArrayList;
  */
 public class Pong extends Game {
 
-    private static final int DELAY = 20;               // ms between frames, so 50 frames a second
+    private static final int DELAY = 20;//50 frames per second               
     private static final int WINNING_SCORE = 75;
     private static final int LABEL_WIDTH = 100;
     private static final int LABEL_HEIGHT = 20;
     private static final int LABEL_MARGIN = 20;
     private static final int STARTING_SECONDS = 120;
-    private static final int MAX_BALLS = 3;            // most normal balls allowed at once
-    private static final int ANNOUNCE_DISTANCE = 150;  // px from the winner's paddle when the palm triggers
+    private static final int MAX_BALLS = 3;            // most normal balls (non volley ball) allowed at once
+    private static final int ANNOUNCE_DISTANCE = 150;
     private static final String WINNER_TEXT = "Oops got it wrong!"; // shown right before the Buddha palm
 
     // match timeline, in seconds left on the clock
@@ -35,12 +35,12 @@ public class Pong extends Game {
 
     private static final int MS_PER_SECOND = 1000;
     private static final int SECONDS_PER_MINUTE = 60;
-    private static final int POWERUP_MS = 8000;        // how long a normal powerup lasts
-    private static final int COMEBACK_MULTIPLIER = 2;  // trailing player's powerup lasts this many times longer
-    private static final int PALM_MS = 3000;           // how long the paddle stays expanded after the Buddha palm
-    private static final int PAUSE_MS = 1500;          // how long "Oops got it wrong!" shows before the Buddha palm
-    private static final int TIGER_PAUSE_MS = 1500;    // game freezes this long on the 虎虎生威 flash
-    private static final int BUDDHA_PAUSE_MS = 2000;   // game freezes this long on the Buddha palm
+    private static final int POWERUP_MS = 8000;      
+    private static final int COMEBACK_MULTIPLIER = 2;  
+    private static final int PALM_MS = 3000;          
+    private static final int PAUSE_MS = 1500;          
+    private static final int TIGER_PAUSE_MS = 1500;   
+    private static final int BUDDHA_PAUSE_MS = 2000;   
 
     private static final int SMALL_VOLLEY = 5;   // balls fired after the first duel
     private static final int BIG_VOLLEY = 10;    // balls fired after the finale
@@ -115,6 +115,7 @@ public class Pong extends Game {
             ball.setX(getFieldWidth() / 2);
             ball.setY(getFieldHeight() / 2);
             balls.add(ball);
+            randomDirection(ball);
             return ball;
         }
         return null;
@@ -135,7 +136,6 @@ public class Pong extends Game {
 
     /**
      * Shows who won and asks if they want to play again
-     * Yes restarts the match, No closes the game
      * @param winner 1 or 2 for the winner, 0 for a tie
      */
     public void finishPanel(int winner) {
@@ -407,7 +407,6 @@ public class Pong extends Game {
             }
         }
 
-        // can't remove from a list while looping over it, so do it here
         for (Ball b : finished) {
             remove(b);
             balls.remove(b);
@@ -418,11 +417,9 @@ public class Pong extends Game {
         }
 
         for (int i = 0; i < ballsToAdd; i++) {
-            Ball newBall = createBall();
-            if (newBall != null) { // at MAX_BALLS nothing is made, so don't turn around a ball already in play
-                newBall.bounceLeft();
-            }
+            createBall();
         }
+
     }
 
     /**
@@ -442,7 +439,6 @@ public class Pong extends Game {
 
     /**
      * Both players roll a random powerup at the same time
-     * Whoever is behind gets theirs for longer to help them catch up
      */
     private void rollPowerups() {
         int p1Ms = POWERUP_MS;
@@ -458,7 +454,6 @@ public class Pong extends Game {
 
     /**
      * Pauses Pong and opens a Zetamac math duel, the winner gets a volley launching 3-10 balls
-     * The game starts again when the duel window closes
      * @param volleySize how many balls get fired
      * @param buddhaPalm true for the finale, where the loser fires and the winner palms it back
      */
@@ -615,7 +610,21 @@ public class Pong extends Game {
         ball.setX(getFieldWidth() / 2);
         ball.setY(getFieldHeight() / 2);
         ball.resetSpeed();
+        randomDirection(ball);
     }
+
+    /**
+     * Sends a ball toward player 1 or player 2 at random, like a coin flip
+     * @param ball the ball to send
+     */
+    private void randomDirection(Ball ball) {
+        if (Math.random() < 0.5) {
+            ball.bounceLeft();
+        } else {
+            ball.bounceRight();
+        }
+    }
+
 
     /**
      * Checks if anyone has won yet

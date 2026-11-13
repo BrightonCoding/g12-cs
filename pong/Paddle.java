@@ -13,7 +13,7 @@ public class Paddle extends GameObject {
 
     /** Height of the field, need this so the paddle knows where the bottom of the screen is */
     private int fieldHeight;
-    private static final int PADDLE_SPEED = 10;
+    private static final int PADDLE_SPEED = 12;
     private static final int PADDLE_WIDTH = 15;
     private static final int PADDLE_HEIGHT = 100;
 
