@@ -22,13 +22,13 @@ public class Pong extends Game {
     private static final int LABEL_WIDTH = 100;
     private static final int LABEL_HEIGHT = 20;
     private static final int LABEL_MARGIN = 20;
-    private static final int STARTING_SECONDS = 120;
+    private static final int STARTING_SECONDS = 90;
     private static final int MAX_BALLS = 3;            // most normal balls (non volley ball) allowed at once
     private static final int ANNOUNCE_DISTANCE = 150;
     private static final String WINNER_TEXT = "Oops got it wrong!"; // shown right before the Buddha palm
 
     // match timeline, in seconds left on the clock
-    private static final int POWERUP_ROLL_1 = 90;  // 1:30
+    private static final int POWERUP_ROLL_1 = 75;  // 1:15
     private static final int DUEL_1 = 60;          // 1:00
     private static final int POWERUP_ROLL_2 = 30;  // 0:30
     private static final int DUEL_2 = 10;          // 0:10, the finale

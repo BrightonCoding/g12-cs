@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Bacteria",
+      "request": "launch",
+      "mainClass": "Bacteria",
+      "projectName": "g12-cs_4120ac6c"
+    },
+    {
+      "type": "java",
       "name": "Test",
       "request": "launch",
       "mainClass": "pong.Test",
